@@ -1,13 +1,13 @@
 #include "circulo.h"
 
-int Circulo::getTalla() const
+int Circulo::getTa() const
 {
-    return talla;
+    return ta;
 }
 
-void Circulo::setTalla(int value)
+void Circulo::setTa(int value)
 {
-    talla = value;
+    ta = value;
 }
 
 int Circulo::getAncho() const
@@ -34,12 +34,12 @@ Circulo::Circulo()
 {
     ancho_y=70;
     ancho_x=90;
-    talla=79;
+    ta=79;
 }
 
 Circulo::Circulo(int xpos, int ypos, int size)
 {
     this->ancho_x=xpos;
     this->ancho_y=ypos;
-    this->talla=size;
+    this->ta=size;
 }

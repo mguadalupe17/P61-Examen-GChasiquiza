@@ -13,6 +13,13 @@
   <property name="windowTitle">
    <string>Juego</string>
   </property>
+  <property name="windowIcon">
+   <iconset resource="Resources.qrc">
+    <normaloff>:/Iconos/dibujo.png</normaloff>:/Iconos/dibujo.png</iconset>
+  </property>
+  <property name="styleSheet">
+   <string notr="true"/>
+  </property>
   <widget class="QWidget" name="centralwidget">
    <layout class="QVBoxLayout" name="verticalLayout">
     <item>
@@ -22,6 +29,9 @@
         <width>500</width>
         <height>400</height>
        </size>
+      </property>
+      <property name="styleSheet">
+       <string notr="true"/>
       </property>
       <property name="frameShape">
        <enum>QFrame::StyledPanel</enum>
@@ -56,31 +66,43 @@
        <item>
         <widget class="QWidget" name="widget_2" native="true">
          <layout class="QGridLayout" name="gridLayout">
-          <item row="3" column="1">
-           <widget class="QPushButton" name="btnAbajo">
-            <property name="text">
-             <string>Abajo</string>
-            </property>
-           </widget>
-          </item>
-          <item row="2" column="0">
-           <widget class="QPushButton" name="btnIzqueirda">
-            <property name="text">
-             <string>Izquierda</string>
-            </property>
-           </widget>
-          </item>
           <item row="2" column="2">
            <widget class="QPushButton" name="btnDerecha">
+            <property name="styleSheet">
+             <string notr="true">background-color: rgb(188, 239, 246);</string>
+            </property>
             <property name="text">
              <string>Derecha</string>
             </property>
            </widget>
           </item>
+          <item row="2" column="0">
+           <widget class="QPushButton" name="btnIzqueirda">
+            <property name="styleSheet">
+             <string notr="true">background-color: rgb(188, 239, 246);</string>
+            </property>
+            <property name="text">
+             <string>Izquierda</string>
+            </property>
+           </widget>
+          </item>
           <item row="1" column="1">
            <widget class="QPushButton" name="btnArriba">
+            <property name="styleSheet">
+             <string notr="true">background-color: rgb(188, 239, 246);</string>
+            </property>
             <property name="text">
              <string>Arriba</string>
+            </property>
+           </widget>
+          </item>
+          <item row="3" column="1">
+           <widget class="QPushButton" name="btnAbajo">
+            <property name="styleSheet">
+             <string notr="true">background-color: rgb(188, 239, 246);</string>
+            </property>
+            <property name="text">
+             <string>Abajo</string>
             </property>
            </widget>
           </item>
@@ -125,17 +147,40 @@
    <addaction name="menuArchivo"/>
   </widget>
   <widget class="QStatusBar" name="statusbar"/>
+  <widget class="QToolBar" name="toolBar">
+   <property name="windowTitle">
+    <string>toolBar</string>
+   </property>
+   <attribute name="toolBarArea">
+    <enum>TopToolBarArea</enum>
+   </attribute>
+   <attribute name="toolBarBreak">
+    <bool>false</bool>
+   </attribute>
+   <addaction name="actionConfigraci0n"/>
+   <addaction name="actionSalir"/>
+  </widget>
   <action name="actionConfigraci0n">
+   <property name="icon">
+    <iconset resource="Resources.qrc">
+     <normaloff>:/Iconos/configuraciones.png</normaloff>:/Iconos/configuraciones.png</iconset>
+   </property>
    <property name="text">
     <string>Configración</string>
    </property>
   </action>
   <action name="actionSalir">
+   <property name="icon">
+    <iconset resource="Resources.qrc">
+     <normaloff>:/Iconos/salida.png</normaloff>:/Iconos/salida.png</iconset>
+   </property>
    <property name="text">
     <string>Salir</string>
    </property>
   </action>
  </widget>
- <resources/>
+ <resources>
+  <include location="Resources.qrc"/>
+ </resources>
  <connections/>
 </ui>

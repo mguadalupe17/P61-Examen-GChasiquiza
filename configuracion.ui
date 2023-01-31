@@ -19,6 +19,13 @@
   <property name="windowTitle">
    <string>Dialog</string>
   </property>
+  <property name="windowIcon">
+   <iconset resource="Resources.qrc">
+    <normaloff>:/Iconos/configuraciones.png</normaloff>:/Iconos/configuraciones.png</iconset>
+  </property>
+  <property name="styleSheet">
+   <string notr="true">background-color: rgb(247, 225, 240);</string>
+  </property>
   <layout class="QVBoxLayout" name="verticalLayout">
    <item>
     <widget class="QGroupBox" name="groupBox">
@@ -46,6 +53,9 @@
           <width>100</width>
           <height>16777215</height>
          </size>
+        </property>
+        <property name="styleSheet">
+         <string notr="true">background-color: rgb(176, 224, 230);</string>
         </property>
         <property name="text">
          <string>Seleccionar</string>
@@ -85,6 +95,10 @@
    </item>
    <item>
     <widget class="QDialogButtonBox" name="buttonBox">
+     <property name="styleSheet">
+      <string notr="true">
+background-color: rgb(176, 224, 230);</string>
+     </property>
      <property name="orientation">
       <enum>Qt::Horizontal</enum>
      </property>
@@ -95,7 +109,9 @@
    </item>
   </layout>
  </widget>
- <resources/>
+ <resources>
+  <include location="Resources.qrc"/>
+ </resources>
  <connections>
   <connection>
    <sender>buttonBox</sender>

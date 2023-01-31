@@ -28,23 +28,20 @@ void Juego::paintEvent(QPaintEvent *event)
 {
     QPainter painter(this);
     // Dibujar la imagen
-    painter.drawImage(0, 100, *miImagen);
+    painter.drawImage(0, 50, *miImagen);
 }
-
-
 
 void Juego::on_btnArriba_released()
 {
     miImagen->fill(Qt::white);
-    m_circulo->setAncho(m_circulo->getAncho()-2);
+    m_circulo->setAncho(m_circulo->getAncho()-3);
     dibujar_circulo();
 }
-
 
 void Juego::on_btnAbajo_released()
 {
     miImagen->fill(Qt::white);
-    m_circulo->setAncho(m_circulo->getAncho()+2);
+    m_circulo->setAncho(m_circulo->getAncho()+3);
     dibujar_circulo();
 }
 
@@ -52,15 +49,13 @@ void Juego::on_btnAbajo_released()
 void Juego::on_btnIzqueirda_released()
 {
     miImagen->fill(Qt::white);
-    m_circulo->setAncho_x(m_circulo->getAncho_x()-2);
+    m_circulo->setAncho_x(m_circulo->getAncho_x()-3);
     dibujar_circulo();
 }
-
-
 void Juego::on_btnDerecha_released()
 {
     miImagen->fill(Qt::white);
-    m_circulo->setAncho_x(m_circulo->getAncho_x()+2);
+    m_circulo->setAncho_x(m_circulo->getAncho_x()+3);
     dibujar_circulo();
 }
 
@@ -74,7 +69,6 @@ void Juego::on_actionConfigraci0n_triggered()
         qDebug() << config->dimension();
     }
 }
-
 void Juego::dibujar_circulo()
 {
 
@@ -85,16 +79,10 @@ void Juego::dibujar_circulo()
 
     pincel.setColor(Qt::black);
     pincel.setWidth(3);
-    // Dibujar una linea
     mPainter->setPen(pincel);
-    mPainter->drawEllipse(m_circulo->getAncho_x(), m_circulo->getAncho(), m_circulo->getTalla(), m_circulo->getTalla());
+    mPainter->drawEllipse(m_circulo->getAncho_x(), m_circulo->getAncho(), m_circulo->getTa(), m_circulo->getTa());
     update();
 }
-
-
-
-
-
 void Juego::on_actionSalir_triggered()
 {
     this->close();
