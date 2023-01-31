@@ -1,12 +1,14 @@
 #include "configuracion.h"
 #include "ui_configuracion.h"
+#include <QDialog>
+#include <QFileDialog>
 
 Configuracion::Configuracion(QWidget *parent) :
     QDialog(parent),
     ui(new Ui::Configuracion)
 {
     ui->setupUi(this);
-    m_color.setRgb(165,29,45);
+    m_color.setRgb (204, 204, 255);
     setWidgetColor();
 }
 
@@ -17,7 +19,9 @@ Configuracion::~Configuracion()
 
 void Configuracion::on_btnColor_released()
 {
-
+    m_color = QColorDialog::getColor(m_color,
+                                    this,
+                                    "Color del pincel");
 }
 
 void Configuracion::setColor(const QColor &newColor)
@@ -47,5 +51,12 @@ const QColor &Configuracion::color() const
 int Configuracion::dimension() const
 {
     return m_dimension;
+}
+void Configuracion::on_inDimension_sliderMoved(int posicion)
+{
+    ui->inDimension->value();
+}
+void Configuracion::on_inDimension_sliderReleased(){
+
 }
 
